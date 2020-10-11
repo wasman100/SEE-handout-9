@@ -1,0 +1,19 @@
+1. Primitive vs. Objects
+Let's say a student writes the following line of code in a predicate method (i.e., a method
+that returns a boolean):
+public boolean IsNameQ() {
+String name = readLine("Enter name: ");
+return (name == "Q");
+}
+The author of this code thinks that the program will return true if the player’s name is
+"Q". What’s the problem here?
+Now consider if the code were written as:
+public boolean IsNameQ() {
+String name = readLine("Enter name: ");
+char ch = name.charAt(0);
+return ((ch == 'Q') && (name.length() == 1));
+}
+How is the code above different with respect to checking for equality with the value "Q"?
+
+the difference is with the char value the you ar checking that the first letter in name is capital Q and also checking it's length 
+where as the string name would need name.equals("Q") 
